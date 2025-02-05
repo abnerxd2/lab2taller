@@ -56,3 +56,36 @@ export const saveAppointment = async (req, res) => {
     });
   }
 };
+
+
+// listar las citas 
+export const getAppointments = async (req, res) => {
+    try{
+      const query = { status: `CREATED` }
+    
+        const { limite = 5, desde = 0 } = req.query
+  
+
+        const [total, appointment ] = await Promise.all([
+            Appointment.countDocuments(query),
+            Appointment.find(query)
+                .skip(Number(desde))
+                .limit(Number(limite))
+        ])
+
+        return res.status(200).json({
+            success: true,
+            total,
+            appointment
+        })
+    }catch(err){
+        return res.status(500).json({
+            success: false,
+            message: "Error al obtener las citas ",
+            error: err.message
+        })
+    }
+};
+
+// Actualizar Cita
+

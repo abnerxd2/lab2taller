@@ -27,6 +27,9 @@ const petSchema = new Schema({
         type: Boolean,
         default: true
     },
+    email:{
+        type:String
+    }
 }, {
     timestamps: true,
     versionKey: false

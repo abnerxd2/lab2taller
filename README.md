@@ -28,6 +28,11 @@ JWT_SECRET=<tu_secreto_jwt>
       "user": "<user_id>"
     }
     ```
+- **Listar Citas**
+  - **URL:** `http://127.0.0.1:3001/adoptionSystem/v1/pet/`
+  - **Metodo** `GET`
+  ```
+
 
 ### Usuarios
 
@@ -109,9 +114,6 @@ JWT_SECRET=<tu_secreto_jwt>
     }
     ```
 
-
-
-
 ## Funcionalidades Adicionales
 
 Las siguientes funcionalidades necesitan ser desarrolladas:
@@ -119,7 +121,7 @@ Las siguientes funcionalidades necesitan ser desarrolladas:
 1. **Actualizar Foto del Usuario**
    - Descripción: Implementar funcionalidad para actualizar la foto de perfil del usuario.
 
-2. **Listar Citas**
+2. **Listar Citas** ya 
    - Descripción: Implementar funcionalidad para listar todas las citas de un usuario.
 
 3. **Actualizar Cita**
